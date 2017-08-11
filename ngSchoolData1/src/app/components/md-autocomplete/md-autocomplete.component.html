@@ -1,0 +1,9 @@
+<md-input-container>
+    <input mdInput placeholder="בית ספר" [mdAutocomplete]="auto" [formControl]="schoolCtrl">
+</md-input-container>
+
+<md-autocomplete #auto="mdAutocomplete">
+    <md-option *ngFor="let school of filteredSchool | async" [value]="school.name" (onSelectionChange)="onSelected.emit(school)">
+        {{ school.name }}
+    </md-option>
+</md-autocomplete>

@@ -1,0 +1,36 @@
+ <!--[columnMode]="'standard'"-->
+ <div *ngIf="Students">       
+        <ngx-datatable        
+        class="dark"
+        [rows]="Students"        
+        [headerHeight]="50"
+        [columnMode]="'force'"
+        [footerHeight]="50"
+        [rowHeight]="'auto'">
+        <ngx-datatable-column name="מספר זהות" [width]="300">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{value.studentId}}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="שם פרטי" [width]="300">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{value.firstName}}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="שם משפחה" [width]="300">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{value.lastName}}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="כיתה" [width]="300">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{value.classCode}}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="מספר כיתה" [width]="300">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{value.classNum}}
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>

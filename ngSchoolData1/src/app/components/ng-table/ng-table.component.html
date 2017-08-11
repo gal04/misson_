@@ -1,0 +1,10 @@
+<div *ngIf="selectedYear">
+    <h3 class="first">סיכום נתונים</h3>
+    <p-dataTable [value]="Students">
+        <p-column field="studentId" [sortable]="true" [filter]="true" filterMatchMode="contains" header="מספר זהות"></p-column>
+        <p-column field="firstName" [sortable]="true" [filter]="true" filterMatchMode="contains" header="שם פרטי"></p-column>
+        <p-column field="lastName"  [sortable]="true" [filter]="true" filterMatchMode="contains" header="מספר משפחה"></p-column>
+        <p-column field="classCode" [sortable]="true" [filter]="true" filterMatchMode="contains" header="כיתה"></p-column>
+        <p-column field="classNum"  [sortable]="true" [filter]="true" filterMatchMode="contains" header="מספר כיתה"></p-column>    
+    </p-dataTable>
+</div>

@@ -1,0 +1,13 @@
+<div>
+    <app-md-autocomplete
+      [Schools]="schoolsInSmartComp"
+       (onSelected)="onSelectedInSmartComp($event)">
+      </app-md-autocomplete>
+    <app-md-select [selectedSchool]="selectedSchool"
+                   (onSelecteYear)="onSelectedYearInSmartComp($event,year)">
+    </app-md-select>
+</div>
+<!--show datatable-->
+<div>
+    <table-ng-component [Students]="studentsInSmartComp" [selectedYear]="selectedY"></table-ng-component>
+</div>

@@ -1,0 +1,8 @@
+<div *ngIf="selectedSchool" >
+    <md-select placeholder="בחר שנה" >
+                <md-option *ngFor="let year of selectedSchool.years2" [value]="year" (onSelectionChange)="SelecteYear($event, year)">
+                  {{year.yearHebrow}}
+                </md-option>
+    </md-select>
+</div>
+<!--(onSelectionChange)="onSelecteYear.emit(year)"-->

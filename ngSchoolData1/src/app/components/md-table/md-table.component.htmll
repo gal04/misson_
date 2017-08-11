@@ -1,0 +1,39 @@
+<div class="example-container mat-elevation-z8">
+  <md-table #table [dataSource]="dataSource" mdSort>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- ID Column -->
+    <ng-container cdkColumnDef="studentId">
+      <md-header-cell *cdkHeaderCellDef md-sort-header> מספר תלמיד </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.studentId}} </md-cell>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container cdkColumnDef="firstName">
+      <md-header-cell *cdkHeaderCellDef md-sort-header> שם פרטי </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.firstName}} </md-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container cdkColumnDef="lastName">
+      <md-header-cell *cdkHeaderCellDef md-sort-header> שם משפחה </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.lastName}} </md-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container cdkColumnDef="classCode">
+      <md-header-cell *cdkHeaderCellDef md-sort-header> כיתה </md-header-cell>
+      <md-cell *cdkCellDef="let row" > {{row.classCode}} </md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="classNum">
+      <md-header-cell *cdkHeaderCellDef md-sort-header> מספר כיתה </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.classNum}} </md-cell>
+    </ng-container>
+
+    <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
+  </md-table>
+</div>
